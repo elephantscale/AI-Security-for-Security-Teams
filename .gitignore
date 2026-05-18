@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Build / generated output
+assembly.out/
+assembly.out.*/
+
+# Optional: editor / OS noise
+.DS_Store
+*.log
