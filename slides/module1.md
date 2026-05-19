@@ -2,6 +2,8 @@
 
 © Elephant Scale
 
+<img src="https://images.pexels.com/photos/17483874/pexels-photo-17483874.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" style="width:70%;"/>
+
 ---
 
 ## Module 1 Agenda
@@ -28,6 +30,8 @@ Key properties:
 - Context window limits how much it "remembers" per request
 
 > From a WAF perspective: the payload is natural language, not SQL or HTML.
+
+<img src="https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" style="width:50%; float:right;"/>
 
 ---
 
@@ -56,6 +60,8 @@ LLMs don't process characters or words — they process **tokens**.
 Security implication:
 - Attackers can craft prompts to maximize token consumption (denial-of-wallet)
 - Token limits can be abused to truncate safety instructions
+
+<img src="https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" style="width:50%; float:right;"/>
 
 ---
 
@@ -210,6 +216,8 @@ How retrieval works:
 
 Security issue: **nearest neighbor** is a semantic match, not an exact string match — hard to filter with traditional rules.
 
+<img src="https://images.pexels.com/photos/3747504/pexels-photo-3747504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" style="width:50%; float:right;"/>
+
 ---
 
 ## Embeddings — What They Are
@@ -242,6 +250,8 @@ Agents can:
 - Spawn sub-agents
 
 > The shift from "chatbot" to "agent" is the shift from **read-only** to **read-write** risk.
+
+<img src="https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" style="width:50%; float:right;"/>
 
 ---
 
@@ -322,6 +332,8 @@ Attack implications:
 - Agent-to-agent calls may bypass WAF entirely (internal network)
 - Trust boundaries between agents are often undefined
 
+<img src="https://images.pexels.com/photos/6019019/pexels-photo-6019019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" style="width:45%; float:right;"/>
+
 ---
 
 ## Copilots — The Business Context
@@ -354,6 +366,8 @@ Functions:
 - Manage API keys and quotas
 
 Examples: AWS Bedrock, Azure AI Studio, Cloudflare AI Gateway, Kong AI Gateway, Portkey, LiteLLM
+
+<img src="https://images.pexels.com/photos/17323801/pexels-photo-17323801.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" style="width:50%; float:right;"/>
 
 ---
 
@@ -388,6 +402,8 @@ Real systems: files, databases, APIs, services
 ```
 
 MCP is becoming the standard for agent tool connectivity — analogous to USB for peripherals.
+
+<img src="https://images.pexels.com/photos/17483870/pexels-photo-17483870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" style="width:50%; float:right;"/>
 
 ---
 
@@ -448,6 +464,8 @@ WAF **cannot** see:
 - Decisions made by the model about tool use
 
 > The WAF sees the envelope. It does not see how the model interprets the letter inside.
+
+<img src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" style="width:50%; float:right;"/>
 
 ---
 
@@ -516,6 +534,8 @@ Bridging this gap requires **AI gateways + guardrails** working alongside WAF.
 - Semantic intent matters, not just syntax
 - The model itself can be the attack vector
 - Output can carry attacks downstream
+
+<img src="https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" style="width:50%; float:right;"/>
 
 ---
 

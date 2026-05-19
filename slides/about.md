@@ -1,19 +1,23 @@
-# Prompt Engineering, ChatGPT, Generative Models
+# AI Security for WAF Specialists
 
+© Elephant Scale
 
 ---
 
-## Agenda - 2 days
+## Agenda
 
-| Day 1                                         | Day 2                              |
-|-----------------------------------------------|------------------------------------|
-| What is Quantum Computing (Spoiler) Setup lab | Multiple qubits, entanglements Lab |
-| Atoms of computation Lab                      | Circuits with qubits Lab           |
-| Single qubit gates Lab                        | Applications overview              |
-| Quantum Enigmas Challenge                     | Shor, Grover Lab                   |
-| Multiple qubits, entanglements Lab            | Philosophy corner                  |
-
- <!-- {"left" : 0.56, "top" : 1.87, "height" : 1, "width" : 9.12} -->
+| Module | Topic |
+|--------|-------|
+| 1 | AI Systems for WAF Engineers |
+| 2 | OWASP GenAI Top 10 |
+| 3 | Prompt Injection Detection |
+| 4 | AI-Aware WAF Rules |
+| 5 | Securing RAG Pipelines |
+| 6 | Agentic AI Security |
+| 7 | API Security for AI |
+| 8 | Detection Engineering & SOC Integration |
+| 9 | Cloud WAFs and AI Security |
+| 10 | Building a Layered AI Defense |
 
 Notes:
 
