@@ -106,7 +106,7 @@ Apply to all `/v1/chat`, `/invoke`, `/converse` endpoints.
 
 ## AWS WAF — Custom Rules for AI Endpoints
 
-```hcl
+```text
 # Terraform: rate limit AI endpoint by IP
 resource "aws_wafv2_web_acl" "ai_waf" {
   name  = "ai-endpoint-waf"
@@ -139,7 +139,7 @@ resource "aws_wafv2_web_acl" "ai_waf" {
 
 ## AWS WAF — Blocking Prompt Injection Patterns
 
-```hcl
+```text
 rule {
   name     = "PromptInjectionKeywords"
   priority = 2
@@ -176,7 +176,7 @@ rule {
 
 Bot Control is especially valuable for AI endpoints because scrapers and automated agents have distinct TLS and HTTP/2 fingerprints.
 
-```hcl
+```text
 rule {
   name     = "BotControlForAI"
   priority = 0
@@ -265,7 +265,7 @@ Azure WAF (on Application Gateway or Front Door) protects AI workloads similarly
 
 Key configurations for AI endpoints:
 
-```bicep
+```shell
 resource wafPolicy 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies@2023-09-01' = {
   name: 'ai-waf-policy'
   properties: {
