@@ -235,7 +235,7 @@ EXTRACT-model = "model":"(?P<model>[^"]+)"
 
 Key Splunk searches:
 
-```spl
+```sql
 index=ai_logs prompt_labels="potential_injection"
 | stats count by user_id, source_ip
 | where count > 10
@@ -327,7 +327,7 @@ Each hypothesis drives a structured hunt query.
 
 **Hypothesis:** Attacker is iterating jailbreaks across multiple sessions.
 
-```spl
+```sql
 index=ai_logs earliest=-24h
 | where guardrail_score > 0.70
 | eval prompt_prefix=substr(prompt_hash, 0, 8)
@@ -348,7 +348,7 @@ Look for: one user, many sessions, high classifier scores, distinct IPs (VPN rot
 
 **Hypothesis:** A bot is abusing the API at machine speed.
 
-```spl
+```sql
 index=ai_logs earliest=-1h
 | bucket span=1m _time
 | stats count as req_per_min,
