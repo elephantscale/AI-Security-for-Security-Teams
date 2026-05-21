@@ -28,8 +28,9 @@ Key properties:
 - Behavior is shaped by training data and prompts
 - Context window limits how much it "remembers" per request
 
-> From a WAF perspective: the payload is natural language, not SQL or HTML.
+![](../images/pexels-markus-winkler-1430818-30839680.jpg)
 
+> From a WAF perspective: the payload is natural language, not SQL or HTML.
 
 ---
 
@@ -44,6 +45,7 @@ Key properties:
 | State | Session-managed | Context window |
 | Injection | SQL, XSS, LDAP | Prompt injection |
 
+![](../images/pexels-diosajandy-13604888.jpg)
 ---
 
 ## Tokens — The Unit of AI Processing
@@ -84,7 +86,10 @@ User Input
     │
     ▼
 User Response
+
+
 ```
+![](../images/pexels-pavel-danilyuk-7594196.jpg)
 
 WAF visibility exists at the edges. The middle is often opaque.
 
