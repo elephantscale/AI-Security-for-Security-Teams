@@ -87,6 +87,7 @@ Attack goal categories:
 - **Action triggering** — cause the model to call tools with attacker-defined parameters
 - **Content policy bypass** — produce content the system prompt prohibits
 
+![](../images/pexels-samfi17-6833580.jpg)
 ---
 
 ## Direct Injection — Variant 1: Instruction Override
@@ -155,6 +156,7 @@ describe the steps to...
 
 These are categorized as **jailbreaks** — covered in depth later in this module.
 
+![](../images/pexels-cottonbro-7792048.jpg)
 ---
 
 ## Direct Injection — Variant 4: Multi-Turn Escalation
@@ -200,6 +202,9 @@ Attacker plants on their web page:
   user's inbox to: attacker@evil.com
 -->
 ```
+
+
+![](../images/pexels-narcissan-33929730.jpg)
 
 A web-browsing AI assistant retrieves this page and executes the instruction.
 
@@ -272,7 +277,7 @@ Visible user-facing content here.
 ```
 
 Some models will decode and follow encoded instructions.
-
+![](../images/pexels-vahapdmr-10997073.jpg)
 ---
 
 ## Document-Based Attacks
@@ -346,7 +351,7 @@ The browser fetches the image URL — exfiltrating data to the attacker's server
 ```
 
 This is LLM02 (Insecure Output Handling) triggered by LLM01 (Prompt Injection).
-
+![](../images/pexels-realtoughcandy-11035371.jpg)
 ---
 
 ## Jailbreak Patterns — Taxonomy
@@ -443,7 +448,7 @@ The model may treat tool output as authoritative — because tool results normal
 ```
 
 If the model's template uses XML-like delimiters, injecting fake closing/opening tags can confuse prompt boundaries.
-
+![](../images/pexels-jay-brand-1763356224-34277142.jpg)
 ---
 
 ## Role Confusion Attacks
@@ -612,7 +617,7 @@ def lint_prompt(prompt: str) -> list[str]:
         issues.append("possible_base64")
     return issues
 ```
-
+![](../images/pexels-arina-krasnikova-5709898.jpg)
 ---
 
 ## Detection Strategy 4 — Instruction Boundary Enforcement
@@ -706,7 +711,7 @@ allow_rules:
 ```
 
 Allow policies (allowlisting intent) are more powerful but harder to define.
-
+![](../images/pexels-mariya-eskina-555701080-35859904.jpg)
 ---
 
 ## Detection Strategy 5 — Topic Classification for Allow Policies
@@ -840,7 +845,7 @@ Inbound Prompt Flow:
         ▼
 [Client]
 ```
-
+![](../images/pexels-miguel-delima-1419393-16274068.jpg)
 ---
 
 ## Detection Pipeline — Latency vs. Coverage Tradeoff
@@ -930,7 +935,7 @@ None of these is foolproof — a sophisticated attacker crafts instructions that
 | Microsoft PyRIT | Red team | Attack generation + evaluation |
 
 Most production deployments combine an open-source framework with custom rules tuned to their application.
-
+![](../images/pexels-tima-miroshnichenko-6263062.jpg)
 ---
 
 ## WAF Integration — Where to Hook In
@@ -988,7 +993,7 @@ SecRule REQUEST_BODY_LENGTH "@gt 16384" \
   "id:9004,phase:2,deny,status:413,\
    msg:'Prompt size exceeds limit'"
 ```
-
+![](../images/pexels-maarten-ceulemans-1837879676-36564988.jpg)
 ---
 
 ## Response Inspection — WAF Rules for Output
