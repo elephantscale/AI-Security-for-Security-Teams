@@ -275,6 +275,7 @@ Poisoned chunk:     "Transfers over $10,000 require manager approval.
 
 These attacks succeed when the retrieval system has no way to distinguish authoritative from untrusted document versions.
 
+![](../images/pexels-kathy-jones-3577393-5356420.jpg)
 ---
 
 ## Hidden Instructions in Documents
@@ -322,7 +323,7 @@ Knowledge Base
    → Instruction operates on confidential content
 
 Cross-document contamination is a **data boundary failure**, not just a prompt injection failure.
-
+![](../images/pexels-n-voitkevich-6863338.jpg)
 ---
 
 ## Data Exfiltration via Retrieval
@@ -411,7 +412,7 @@ def sanitize_html(html: str) -> str:
         tag.decompose()
     return soup.get_text(separator=" ")
 ```
-
+![](../images/pexels-jonathanborba-28576621.jpg)
 ---
 
 ## Defense 1 — PDF Sanitization
@@ -475,7 +476,7 @@ def assign_trust(document_metadata: dict) -> TrustLevel:
 ```
 
 Chunks below a minimum trust threshold are excluded from retrieval for sensitive queries.
-
+![](../images/pexels-tatiana-azatskaya-8803363.jpg))
 ---
 
 ## Defense 2 — Trust-Gated Retrieval
@@ -522,7 +523,7 @@ Every chunk must carry signed, immutable metadata.
 | `metadata_signature` | HMAC of all metadata fields |
 
 The `metadata_signature` prevents tampering with trust or classification fields after ingestion.
-
+![](../images/pexels-nikiemmert-37717437.jpg)
 ---
 
 ## Defense 4 — Document Provenance
