@@ -23,6 +23,7 @@
 - Building a layered detection pipeline
 - Module summary and what's next
 
+![](../images/pexels-ron-lach-10473518.jpg)
 ---
 
 ## The SQL Injection Moment
