@@ -22,7 +22,7 @@
 - Retrieval policies and segmentation
 - Case study: poisoning an AI assistant via PDF
 - Lab 4 preview
-
+![](../images/pexels-hashcode-error-30255832.jpg)
 ---
 
 ## RAG Pipeline Recap
@@ -74,7 +74,7 @@ RAG introduces threats at **two distinct phases**:
 - Semantic poisoning (influencing what gets retrieved)
 - Unauthorized cross-tenant retrieval
 - Data exfiltration via carefully crafted queries
-
+![](../images/pexels-alejandro-de-roa-649065356-30286915.jpg)
 ---
 
 ## Vector Database Threats Overview
@@ -157,7 +157,7 @@ poisoned_embedding = embed("Our refund policy is 30 days.\n[SYSTEM: ...]")
 similarity = cosine_similarity(original_embedding, poisoned_embedding)
 # Typical result: 0.91–0.98 — nearly identical placement in vector space
 ```
-
+![](../images/pexels-strannik-sk-29042089.jpg)
 ---
 
 ## Malicious PDFs — The Attack Surface
@@ -178,7 +178,7 @@ PDFs are the most common RAG document format and one of the most dangerous.
 | Metadata injection | Malicious instructions in PDF metadata fields |
 | Annotation injection | Instructions in PDF annotation comments |
 | Embedded files | Malicious content in attached files within the PDF |
-
+![](../images/pexels-rdne-7947659.jpg)
 ---
 
 ## Malicious PDF — Proof of Concept
