@@ -641,7 +641,7 @@ Before a document enters the vector database:
 [ ] Classification label attached
 [ ] Ingestion audit log entry written
 ```
-
+![](../images/pexels-wolfgang-weiser-467045605-18784617.jpg)
 ---
 
 ## Detecting Injection Patterns at Ingestion
@@ -720,7 +720,7 @@ Step 5: Employees follow the instruction
 | Audit logging | Ingestion of document flagged; alert sent to security team |
 
 **Conclusion:** No single defense is sufficient. The attack is stopped by defense-in-depth — each layer catches what the previous layer misses.
-
+![](../images/pexels-gabby-k-5841955.jpg)
 ---
 
 ## Monitoring RAG Security Events
