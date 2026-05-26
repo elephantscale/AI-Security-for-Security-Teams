@@ -122,7 +122,7 @@ GraphQL is increasingly used in AI backends for flexible data fetching by agents
 
 An agent or attacker queries the schema to map the data model:
 
-```graphql
+```text
 {
   __schema {
     types {
@@ -149,7 +149,7 @@ This returns every type, field, and relationship in the API.
 
 A deeply nested query can cause exponential backend work:
 
-```graphql
+```text
 {
   users {
     orders {
@@ -181,7 +181,7 @@ A deeply nested query can cause exponential backend work:
 
 GraphQL allows multiple operations in one request:
 
-```graphql
+```text
 mutation {
   a1: login(user:"admin", pass:"password1") { token }
   a2: login(user:"admin", pass:"password2") { token }
