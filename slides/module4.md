@@ -39,7 +39,7 @@ AI inference APIs accept **freeform natural language**:
   ]
 }
 ```
-
+![](../images/pexels-raymond-petrik-1448389535-35156663.jpg)
 The attack is **semantically encoded** — pattern matching on strings is not enough.
 
 ---
@@ -55,7 +55,7 @@ The attack is **semantically encoded** — pattern matching on strings is not en
 - Same endpoint serves normal users and attackers
 
 > Every text field is a potential injection surface.
-
+![](../images/pexels-markus-winkler-1430818-19825350.jpg)
 ---
 
 ## Anatomy of a Chat Completions Request
@@ -142,7 +142,7 @@ if token_estimate > LIMIT:
 ```
 
 For production: use the model provider's tokenizer library (e.g., `tiktoken` for OpenAI).
-
+![](../images/pexels-karola-g-7680680.jpg)
 ---
 
 ## Prompt Size Inspection
@@ -167,7 +167,7 @@ Warn if:
 ```
 
 Structural limits are cheap to enforce and stop naive volume attacks immediately.
-
+![](../images/pexels-redwan-habib-224183836-12166587.jpg)
 ---
 
 ## Prompt Size Inspection — ModSecurity Example
@@ -211,6 +211,7 @@ AI signatures look for **instruction-manipulation patterns**.
 | Extraction attempts | `output your full system prompt`, `what were you told at the start` |
 | Encoding evasion | Base64-encoded instructions, leetspeak, Unicode lookalikes |
 
+![](../images/pexels-apyfz-32820935.jpg)
 ---
 
 ## AI-Specific Signatures — Rule Examples
@@ -376,7 +377,7 @@ GET /v1/models  → Lists available models
 - Return uniform error responses — do not differentiate 404 from 403
 - Rate-limit failed model requests per API key
 - Alert on > 5 distinct model IDs from one identity in 60 seconds
-
+![](../images/pexels-pixabay-219570.jpg)
 ---
 
 ## Inference Scraping
@@ -492,7 +493,7 @@ SecRule ARGS_JSON:max_tokens "@gt 4096" \
      setvar:'request.json.max_tokens=4096', \
      msg:'max_tokens capped to 4096'"
 ```
-
+![](../images/pexels-emil-kalibradov-3013808-7085787.jpg)
 ---
 
 ## Protecting Streaming APIs
@@ -576,7 +577,7 @@ This creates:
 - Infinite loops if agents call each other
 - Prompt injection that propagates across agents
 - Attribution loss — who authorized the innermost call?
-
+![](../images/pexels-max-laurell-1958001-9454231.jpg)
 ---
 
 ## Blocking Recursive Agent Calls
@@ -608,7 +609,7 @@ SecRule REQUEST_URI "@beginsWith /internal/agent" \
      msg:'Missing agent depth header on internal route'"
     SecRule &REQUEST_HEADERS:X-Agent-Depth "@eq 0"
 ```
-
+![](../images/pexels-jan-van-der-wolf-11680885-29614998.jpg)
 ---
 
 ## Recursive Agent Call — Depth Tracking
@@ -725,7 +726,7 @@ Incoming request to /v1/chat/completions
 
 **Mistake 5 — No kill switch**
 - When an anomaly fires, you need a way to stop all inference traffic instantly
-
+![](../images/pexels-rdne-8363153.jpg)
 ---
 
 ## Module 4 Summary
