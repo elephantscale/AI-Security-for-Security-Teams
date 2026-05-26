@@ -617,7 +617,7 @@ def lint_prompt(prompt: str) -> list[str]:
         issues.append("possible_base64")
     return issues
 ```
-![](../images/pexels-arina-krasnikova-5709898.jpg)
+![](../images/pexels-arina-krasnikova-5709898.png)
 ---
 
 ## Detection Strategy 4 — Instruction Boundary Enforcement
