@@ -32,7 +32,7 @@ AI workloads produce **unstructured, high-volume, semantically complex** telemet
 A prompt injection attempt looks like a normal HTTP POST — unless you know what to look for.
 
 > Without AI-aware detection, the SOC is blind to the most dangerous AI attack vectors.
-
+![](../images/pexels-spacex-586104.jpg)
 ---
 
 ## The AI Telemetry Stack
@@ -58,7 +58,7 @@ A prompt injection attempt looks like a normal HTTP POST — unless you know wha
 │          SIEM / Observability Platform  │ ← Aggregation
 └─────────────────────────────────────────┘
 ```
-
+![](../images/pexels-jakubzerdzicki-16423107.jpg)
 ---
 
 ## What AI Telemetry to Collect
@@ -101,7 +101,7 @@ Prompt Arrives at AI Gateway
 │  Write to log store │  ← SIEM, S3, Elasticsearch
 └─────────────────────┘
 ```
-
+![](../images/pexels-buse-d-458095896-17227898.jpg)
 ---
 
 ## Prompt Log Schema (JSONL Format)
@@ -125,7 +125,7 @@ Prompt Arrives at AI Gateway
   "guardrail_score": 0.74
 }
 ```
-
+![](../images/pexels-peaky-31343632.jpg)
 ---
 
 ## Token Analytics — The Numbers That Reveal Intent
@@ -139,7 +139,7 @@ Attackers leave token fingerprints:
 | Repeated identical prompts | Hash collision rate spikes | Scraping / enumeration |
 | Escalating token use | Session token totals grow | Denial-of-wallet setup |
 | Many requests, max tokens | High RPM + max output | Automated agent abuse |
-
+![](../images/pexels-black-ice-551383-1314543.jpg)
 ---
 
 ## Token Analytics — Baselining
@@ -241,7 +241,7 @@ index=ai_logs prompt_labels="potential_injection"
 | where count > 10
 | sort -count
 ```
-
+![](../images/pexels-themob000-28428584.jpg)
 ---
 
 ## Integrating AI Logs with Elasticsearch
@@ -341,7 +341,7 @@ index=ai_logs earliest=-24h
 ```
 
 Look for: one user, many sessions, high classifier scores, distinct IPs (VPN rotation).
-
+![](../images/pexels-introspectivedsgn-9524660.jpg)
 ---
 
 ## Threat Hunt — Automated Agent Abuse
@@ -360,7 +360,7 @@ index=ai_logs earliest=-1h
 ```
 
 Low unique_prompt ratio = repetitive machine-generated queries.
-
+![](../images/pexels-ganajp-19632850.jpg)
 ---
 
 ## Threat Hunt — Model Scraping
@@ -444,7 +444,7 @@ location /v1/chat/completions {
 ```
 
 Combine with token-level rate limiting at the AI gateway for complete coverage.
-
+![](../images/pexels-yaroslav-shuraev-4888860.jpg)
 ---
 
 ## AI Runtime Observability
@@ -531,7 +531,7 @@ Recommended tiered alerting:
 | WARNING | Guardrail score 0.7–0.85 | Log + soft block (CAPTCHA) |
 | ALERT | Guardrail score > 0.85 | Block + notify SOC |
 | CRITICAL | Campaign detected (10+ alerts same source) | Block IP range + escalate |
-
+![](../images/pexels-regan-dsouza-1315522347-33977919.jpg)
 ---
 
 ## Incident Response for AI Attacks
