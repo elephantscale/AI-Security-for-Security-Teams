@@ -82,7 +82,7 @@ Observability:
   ✓ Cost attribution per consumer
   ✓ Anomaly alerting
 ```
-![](./images/pexels-peter-dyllong-2158803154-36310769.jpg)
+![](../images/pexels-peter-dyllong-2158803154-36310769.jpg)
 ---
 
 ## AI Gateway vs Traditional API Gateway
