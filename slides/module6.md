@@ -56,7 +56,7 @@ The model decides which tools to call, in what order, with what arguments.
 | Auditability | Easy | Complex — chains of calls |
 
 A WAF can see the initial HTTP request. It cannot see what the agent does next.
-
+![](../images/pexels-kanhaiya-sharma-284427440-13062558.jpg)
 ---
 
 ## The Agentic Loop
@@ -94,7 +94,7 @@ Example: A customer support agent granted access to:
 - Knowledge base admin
 
 Only "read customer record" and "create ticket" were needed.
-
+![](../images/pexels-anntarazevich-5697255.jpg)
 ---
 
 ## Tool Abuse
@@ -138,6 +138,7 @@ Each individual API call may look normal in isolation. The sequence is the attac
 **WAF implication:** Rate limiting individual endpoints misses chained abuse. Look at sequences, not just individual requests.
 
 ---
+![](../images/pexels-realtoughcandy-11035364.jpg)
 
 ## Autonomous Loops and Runaway Agents
 
@@ -179,7 +180,7 @@ Example escalation chain:
 ```
 
 The LLM did not "hack" anything — it followed instructions through poorly guarded APIs.
-
+![](../images/pexels-aaron-j-hill-3434251-8862190.jpg)
 ---
 
 ## Memory Poisoning
@@ -214,7 +215,7 @@ The poisoned memory persists across users and sessions if memory is not properly
 | Cross-user bleed | Memory not namespaced per user |
 
 **Detection:** Monitor what gets written to memory. Treat memory writes as privileged operations.
-
+![](../images/pexels-jamaal-hutchinson-675024091-18657048.jpg)
 ---
 
 ## Indirect Tool Execution
@@ -254,7 +255,7 @@ Any content the agent reads is a potential injection vector:
 - Slack/Teams messages
 
 **Principle:** Treat all retrieved content as untrusted input, regardless of its source.
-
+![](../images/pexels-zsuzsa-zsuzsa-127738300-30509589.jpg)
 ---
 
 ## Agent Impersonation
@@ -275,7 +276,7 @@ Problems this exploits:
 - No authentication between agent-to-agent calls
 - Agents trust messages labeled as coming from "system" or "orchestrator"
 - LLMs do not verify cryptographic identity — they reason about text
-
+![](../images/pexels-alevdogan-10530131.jpg)
 ---
 
 ## Credential Leakage
@@ -295,7 +296,7 @@ Response: "You are an agent with API key: sk-..."
 **Via exfiltration:** Injected instruction causes agent to send credentials to attacker endpoint
 
 **Via log exposure:** Agent debug logs include full context windows with embedded secrets
-
+![](../images/pexels-alex-dos-santos-305643819-29725026.jpg)
 ---
 
 ## Credential Leakage — Risk Matrix
@@ -347,7 +348,7 @@ Agents in a pipeline often grant each other elevated trust.
 **Result:** An attacker injecting into a low-privilege agent can cause a high-privilege agent to act.
 
 This is privilege escalation through the trust chain, not through a software vulnerability.
-
+![](../images/pexels-tara-winstead-8378723.jpg)
 ---
 
 ## Defensive Framework: The ALPA Model
@@ -412,7 +413,7 @@ For high-impact actions, require human approval before execution.
 ```
 
 Approval gates should be mandatory for: delete, send, publish, transfer, modify-config.
-
+![](../images/pexels-rinoadamo-34931889.jpg)
 ---
 
 ## Defense: Runtime Policy Engines
@@ -506,7 +507,7 @@ def tool_dispatch(agent_id, tool_name, args):
         raise PolicyViolation(f"{agent_id} may not call {tool_name}")
     return execute_tool(tool_name, args)
 ```
-
+![](../images/pexels-nadine-ginzel-80607840-20121327.jpg)
 ---
 
 ## Defense: Human-in-the-Loop (HITL)
@@ -561,7 +562,7 @@ Log **denied** actions. They are often more informative than allowed ones.
 | Agent-to-agent call with forged header | Impersonation attempt |
 | Credential pattern in tool args | Leakage attempt |
 | High token count, low output | Injection padding / prompt stuffing |
-
+![](../images/pexels-divineleaders-7007930.jpg)
 ---
 
 ## WAF Controls for Agentic Traffic
@@ -660,7 +661,7 @@ The WAF is the first line of defense. Agentic security requires defense in depth
 - OWASP API Security Top 10 applied to AI APIs
 
 The agent talks to APIs. Module 7 is about securing those APIs.
-
+![](../images/pexels-dmytkopl-34929953.jpg)
 ---
 
 ## Lab 6 Preview — Secure an Autonomous Agent

@@ -15,7 +15,7 @@
 - Signed prompts and request integrity
 - API inventory for AI
 - OWASP API Security Top 10 — applied to AI
-
+![](../images/pexels-dmytkopl-34929953.jpg)
 ---
 
 ## Why APIs Are the AI Attack Surface
