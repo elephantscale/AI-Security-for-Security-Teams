@@ -55,7 +55,7 @@ Securing the LLM prompt is necessary. Securing the APIs around it is equally cri
 | Secrets | Vault / KMS | HTTP/S |
 
 Each layer is a potential attack or misconfiguration point.
-
+![](../images/pexels-freestockpro-12956020.jpg)
 ---
 
 ## API Gateways as AI Enforcement Points
@@ -82,7 +82,7 @@ Observability:
   ✓ Cost attribution per consumer
   ✓ Anomaly alerting
 ```
-
+![](./images/pexels-peter-dyllong-2158803154-36310769.jpg)
 ---
 
 ## AI Gateway vs Traditional API Gateway
@@ -219,6 +219,7 @@ MCP servers are HTTP services with SSE (Server-Sent Events) for streaming.
 
 Security implication: **MCP servers are privileged API endpoints** — they execute tool calls on behalf of the model.
 
+![](../images/ChatGPT_Image_MCP.png)
 ---
 
 ## MCP Security Risks
@@ -259,7 +260,7 @@ Security implication: **MCP servers are privileged API endpoints** — they exec
 Strict input schemas prevent parameter injection.
 
 **Network:** MCP servers should not be publicly reachable. Place behind API gateway with IP allowlist.
-
+![](../images/pexels-cottonbro-8720616.jpg)
 ---
 
 ## AI Plugin Security
@@ -310,7 +311,7 @@ Signature: [RS256 signature]
 ```
 
 Short TTL, narrow scope, specific audience. Not a generic long-lived API key.
-
+![](../images/pexels-realtoughcandy-11035363.jpg)
 ---
 
 ## JWT Vulnerabilities in AI Contexts
@@ -347,7 +348,7 @@ API keys are static, shared, and hard to rotate. Agents need dynamic identity.
 - Azure Managed Identity
 
 **Never:** hard-code API keys in agent code, Docker images, or prompt templates.
-
+![](../images/pexels-eye4dtail-333837.jpg)
 ---
 
 ## Delegated Authorization — OAuth 2.0 for Agents
@@ -367,7 +368,7 @@ When an agent acts on behalf of a user, it must carry delegated authority — no
 4. Agent acts with the exchanged token
 5. Backend service sees: acting agent + user principal
 ```
-
+![](../images/pexels-cottonbro-5474291.jpg)
 This preserves the audit trail — the backend knows which user triggered which agent action.
 
 ---
@@ -431,7 +432,7 @@ The agent treats the API response as data. It is actually adversarial input.
 - Validate API responses against a strict schema before passing to LLM context
 - Never pass raw third-party API output directly into a prompt
 - Treat third-party API responses as untrusted — same as user input
-
+![](../images/pexels-mert-dundul-680827349-33362145.jpg)
 ---
 
 ## Secret Management for AI Workloads
@@ -526,7 +527,7 @@ if not verify_prompt(system_prompt, stored_signature):
 ```
 
 Use `hmac.compare_digest` — it is constant-time and prevents timing attacks.
-
+![](../images/pexels-pixabay-261621.jpg)
 ---
 
 ## API Inventory for AI
@@ -573,7 +574,7 @@ grep -E "(openai\.com|anthropic\.com|bedrock\.amazonaws\.com|
 - Review Docker images for embedded credentials or model files
 
 **Automated:** Use API discovery tools (42Crunch, Traceable, Salt Security) tuned for AI endpoint signatures.
-
+![](../images/pexels-anna-alexes-18139455-7822677.jpg)
 ---
 
 ## Rate Limiting for AI APIs — Beyond Requests/Sec
@@ -669,7 +670,7 @@ AI APIs evolve rapidly. Deprecated endpoints are often left running and unmonito
 4. Block deprecated versions at gateway on sunset date
 5. Apply WAF policy to all versions — not just the latest
 ```
-
+![](../images/pexels-jan-van-der-wolf-11680885-12048071.jpg)
 ---
 
 ## API Abuse via Embedded AI Features
