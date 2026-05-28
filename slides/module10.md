@@ -1,4 +1,4 @@
-n# Module 10 — Building a Layered AI Defense
+# Module 10 — Building a Layered AI Defense
 
 © Elephant Scale
 
@@ -43,7 +43,9 @@ Here is why:
 | Agent privilege escalation | ✗ Invisible |
 
 The WAF protects the perimeter. The AI creates an interior attack surface the WAF cannot reach.
+
 ![](../images/pexels-joaquin-carfagna-3131171-27575306.jpg)
+
 ---
 
 ## Defense in Depth — The AI Edition
