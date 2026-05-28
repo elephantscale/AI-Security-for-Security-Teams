@@ -43,7 +43,7 @@ Here is why:
 | Agent privilege escalation | ✗ Invisible |
 
 The WAF protects the perimeter. The AI creates an interior attack surface the WAF cannot reach.
-
+![](../images/pexels-joaquin-carfagna-3131171-27575306.jpg)
 ---
 
 ## Defense in Depth — The AI Edition
@@ -85,7 +85,7 @@ No single layer is sufficient. Every layer is necessary.
 
 This is not a product list. It is an **architecture pattern**.
 Some layers can be implemented in a single tool; others require multiple products.
-
+![](../images/pexels-mahmoudramadan-33740715.jpg)
 ---
 
 ## Layer 1 — WAF
@@ -145,7 +145,7 @@ Some layers can be implemented in a single tool; others require multiple product
 **Tools:** Cloudflare AI Gateway, Kong AI Gateway, LiteLLM, Portkey, HelixML
 
 **Configuration principle:** Every prompt and every completion should pass through this layer. No direct LLM API calls from application code.
-
+![](../images/pexels-dbaler-9534649.jpg)
 ---
 
 ## Layer 4 — Guardrails
@@ -163,7 +163,7 @@ Some layers can be implemented in a single tool; others require multiple product
 **Tools:** AWS Bedrock Guardrails, Azure AI Content Safety + Prompt Shields, NVIDIA NeMo Guardrails, Guardrails AI, LLM Guard
 
 **Key distinction:** Guardrails are probabilistic and language-model-based. They have false positive and false negative rates. They are not a security boundary — they are a safety layer.
-
+![](../images/pexels-henry-chau-188975518-11845361.jpg)
 ---
 
 ## Layer 4 — Guardrails Architecture
@@ -212,7 +212,7 @@ Prompt arrives at AI Gateway
 **Tools:** Custom SIEM pipeline (Elasticsearch/Splunk), OpenTelemetry traces, AWS CloudWatch Insights, Datadog LLM Observability
 
 **Principle:** Runtime monitoring should be asynchronous (does not block requests) but should be able to trigger blocking via a SOAR/automation hook when thresholds are crossed.
-
+![](../images/pexels-kerimeveyik-28782186.jpg)
 ---
 
 ## Layer 5 — Behavioral Baseline Example
@@ -242,7 +242,7 @@ class UserBehaviorMonitor:
         if scores[-1] > scores[0] * 1.5 and scores[-1] > 0.6:
             return Alert("rising_jailbreak_score", severity="HIGH")
 ```
-
+![](../images/pexels-keira-burton-6624327.jpg)
 ---
 
 ## Layer 6 — Identity and Authorization
@@ -297,7 +297,7 @@ CORRECT: Per-session, time-limited credentials
 - No persistent state between agent sessions unless explicitly authorized
 
 **Tools:** gVisor, Firecracker microVMs, Docker + seccomp profiles, AWS Lambda (sandboxed execution), Azure Container Apps
-
+![](../images/pexels-tomfisk-12025298.jpg)
 ---
 
 ## Layer 7 — Sandbox Configuration (Docker + seccomp)
@@ -353,7 +353,7 @@ agent-executor:
 | Execute code | High | Sandbox + confirmation |
 | Transfer funds | Critical | Human approval + MFA |
 | Modify access controls | Critical | Human approval + audit |
-
+![](../images/pexels-uhumrea-33800717.jpg)
 ---
 
 ## Layer 8 — Human Approval Pattern
@@ -405,7 +405,7 @@ class AgentActionRouter:
 - Log retention and tamper-evident audit trail for compliance
 
 **The observability principle:** If you cannot see it, you cannot defend it. AI attacks are often multi-step, multi-session campaigns. Observability is what makes them visible before they succeed.
-
+![](../images/pexels-cottonbro-6003324.jpg)
 ---
 
 ## Layer 9 — The Unified Log Event Schema
@@ -470,7 +470,7 @@ REPORT
   - GDPR/HIPAA notification if PII was exposed in completions
   - Share sanitized IoCs with threat intel community
 ```
-
+![](../images/pexels-wolfgang-weiser-467045605-21413955.jpg)
 ---
 
 ## Mapping Threats to Layers
@@ -563,7 +563,7 @@ Not every team can deploy all 10 layers at once. A phased approach:
 - Layer 7: Agent sandbox for tool execution
 - Layer 8: Human approval workflow for high-risk actions
 - Layer 10: AI-specific IR playbook
-
+![](../images/pexels-wal_-172619-2156618639-36147344.jpg)
 ---
 
 ## From WAF Engineer to AI Runtime Security Engineer
@@ -695,6 +695,7 @@ Then:
 - Attack it with all major attack types from this course
 - Measure the false positive rate on legitimate traffic
 - Tune thresholds and produce a written architecture summary
+![](../images/pexels-djordje-vezilic-59599374-10549490.jpg)
 
 ---
 
