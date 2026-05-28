@@ -48,7 +48,7 @@ Internet
 ```
 
 No single product covers all layers.
-
+![](../images/pexels-tugba-16155335.jpg)
 ---
 
 ## Traditional WAF vs AI Gateway — Core Differences
@@ -101,7 +101,7 @@ AWS-AWSManagedRulesAnonymousIpList      ← VPN/Tor/proxy exits
 ```
 
 Apply to all `/v1/chat`, `/invoke`, `/converse` endpoints.
-
+![](../images/amazon-logo.png)
 ---
 
 ## AWS WAF — Custom Rules for AI Endpoints
@@ -218,7 +218,7 @@ AWS Bedrock provides native AI security controls beyond WAF:
 | Invocation logging | Full prompt/completion audit trail to CloudWatch |
 
 Bedrock Guardrails operate **inside** the model invocation path — not at HTTP.
-
+![](../images/Bedrock.png)
 ---
 
 ## AWS Bedrock Guardrail — Configuration Example
@@ -284,7 +284,7 @@ resource wafPolicy 'Microsoft.Network/ApplicationGatewayWebApplicationFirewallPo
   }
 }
 ```
-
+![](../images/Azure.png)
 ---
 
 ## Azure AI Content Safety
@@ -356,7 +356,7 @@ Cloudflare AI Gateway
    ▼
 LLM Provider API
 ```
-
+![](../images/Cloudflare.png)
 ---
 
 ## Cloudflare AI Gateway — Configuration
@@ -455,7 +455,7 @@ Security controls available at the API gateway layer:
 | TLS termination | Certificate inspection |
 | Request logging | Structured audit trail |
 | Circuit breaker | Fail-safe when LLM is overloaded |
-
+![](../images/nginx.png)
 ---
 
 ## Envoy Proxy — AI Filtering with Ext AuthZ
@@ -489,7 +489,7 @@ clusters:
                     address: ai-guardrail-service
                     port_value: 9001
 ```
-
+![](../images/envoy.png)
 ---
 
 ## Envoy — AI Security Sidecar (Python)
