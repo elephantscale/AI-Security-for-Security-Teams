@@ -25,7 +25,7 @@
 
 ## The Core Thesis
 
-> **A WAF alone cannot secure AI.**
+**A WAF alone cannot secure AI.**
 
 Here is why:
 
