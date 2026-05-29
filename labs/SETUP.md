@@ -32,6 +32,7 @@
      ```sh
      pip install -r requirements.txt
      ```
+
 7. **Create .env File for all API Keys**
     - We use one .env file at the root of all labs
    
