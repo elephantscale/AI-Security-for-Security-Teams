@@ -6,3 +6,11 @@
 
 ```sh
 source myenv/bin/activate
+```
+
+3. **Start Jupyter Lab**
+   - Start Jupyter UI with the command:
+     ```sh
+     jupyter lab
+     ```
+

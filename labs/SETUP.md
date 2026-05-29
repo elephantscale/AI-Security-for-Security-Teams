@@ -35,18 +35,5 @@
 7. **Create .env File for all API Keys**
     - We use one .env file at the root of all labs
    
-8. **Start Jupyter Lab**
-   - Start Jupyter UI with the command:
-     ```sh
-     jupyter lab
-     ```
 
-All together
 
-```sh
-python -m venv myenv
-source myenv/bin/activate  
-pip install ipykernel 
-python -m ipykernel install --user --name=myenv --display-name "My env"
-pip install -r requirements.txt
-```

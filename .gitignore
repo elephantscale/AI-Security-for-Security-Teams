@@ -224,3 +224,4 @@ assembly.out.*/
 # Optional: editor / OS noise
 .DS_Store
 *.log
+myenv/
