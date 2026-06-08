@@ -1,7 +1,7 @@
 # AI Security for WAF Specialists
 © Elephant Scale
 
-May 19where, 2026
+May 19, 2026
 
 ## Course Description
 
