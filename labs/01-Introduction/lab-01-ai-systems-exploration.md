@@ -37,16 +37,16 @@ Your machine
     ├── mitmproxy (to inspect HTTP traffic)
     └── OpenAI-compatible API endpoint
             │
-            └── http://lab-api:8000/v1  (lab-provided proxy)
+            └── https://api.openai.com/v1  (OpenAI API endpoint)
 ```
 
-The lab API endpoint is an OpenAI-compatible proxy that logs all traffic and strips API costs. Use this instead of hitting OpenAI directly unless instructed otherwise.
+These labs call the OpenAI API directly. If your instructor provides an OpenAI-compatible proxy endpoint, set `OPENAI_BASE_URL` to that instead.
 
 Set your environment:
 
 ```bash
 export OPENAI_API_KEY="lab-key-provided-by-instructor"
-export OPENAI_BASE_URL="http://lab-api:8000/v1"
+export OPENAI_BASE_URL="https://api.openai.com/v1"
 ```
 
 ---

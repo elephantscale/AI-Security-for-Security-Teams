@@ -39,14 +39,14 @@ Your machine
     ├── Keyword-based retriever (simulates embedding retrieval)
     └── OpenAI-compatible API endpoint
             │
-            └── http://lab-api:8000/v1  (lab-provided proxy)
+            └── https://api.openai.com/v1  (OpenAI API endpoint)
 ```
 
 Set your environment:
 
 ```bash
 export OPENAI_API_KEY="lab-key-provided-by-instructor"
-export OPENAI_BASE_URL="http://lab-api:8000/v1"
+export OPENAI_BASE_URL="https://api.openai.com/v1"
 ```
 
 ---
