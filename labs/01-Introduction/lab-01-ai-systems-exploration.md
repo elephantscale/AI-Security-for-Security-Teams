@@ -74,7 +74,7 @@ print(response.choices[0].message.content)
 
 **Run it:**
 ```bash
-python ex1_basic_call.py
+python3 ex1_basic_call.py
 ```
 
 ### 1.2 Inspect the full response object
