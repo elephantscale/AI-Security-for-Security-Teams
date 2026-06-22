@@ -284,7 +284,7 @@ def simple_retrieve(query: str, top_k: int = 2) -> list[dict]:
         doc_words = set(doc["content"].lower().split())
         score = len(query_words & doc_words)
         scored.append((score, doc))
-    scored.sort(reverse=True)
+    scored.sort(key=lambda x: x[0], reverse=True)
     return [doc for _, doc in scored[:top_k]]
 
 def rag_query(user_question: str) -> str:

@@ -83,7 +83,7 @@ def retrieve(query: str, top_k: int = 3) -> list[dict]:
         score = len(query_tokens & doc_tokens)
         scored.append((score, doc))
     scored.sort(key=lambda x: x[0], reverse=True)
-    return [doc for _, doc in scored[:top_k] if _[0] > 0 or len(scored) <= top_k]
+    return [doc for score, doc in scored[:top_k] if score > 0 or len(scored) <= top_k]
 
 # ---------- LLM query step ----------
 def rag_query(question: str, retrieved_docs: list[dict] | None = None) -> str:

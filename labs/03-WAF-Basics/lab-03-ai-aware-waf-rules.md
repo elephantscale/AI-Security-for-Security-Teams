@@ -60,11 +60,11 @@ import json
 import httpx
 
 API_KEY  = os.environ["OPENAI_API_KEY"]
-BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com")
+BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1")
 
 def send_and_log(payload: dict) -> dict:
-    """Send a /v1/chat/completions request and print what a WAF would see."""
-    url = f"{BASE_URL}/v1/chat/completions"
+    """Send a /chat/completions request and print what a WAF would see."""
+    url = f"{BASE_URL}/chat/completions"
     headers = {
         "Authorization": f"Bearer {API_KEY}",
         "Content-Type": "application/json",
