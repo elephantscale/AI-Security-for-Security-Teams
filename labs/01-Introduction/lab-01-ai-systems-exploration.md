@@ -459,12 +459,21 @@ Complete this table based on what you observed in the exercises:
 
 Build a script that:
 
-1. Sends 20 requests in rapid succession to the lab API
+1. Sends 20 requests in rapid succession to the API
 2. Measures the response time for each
 3. Tracks the total token consumption
 4. Identifies at what point a token-based rate limit would trigger
 
-Hint: Use `asyncio` and `httpx.AsyncClient` for concurrent requests.
+**Hints:**
+
+1. Use `asyncio` and `httpx.AsyncClient` for concurrent requests.
+2. **Read `OPENAI_BASE_URL` with a default — don't index it directly.** `os.environ['OPENAI_BASE_URL']` raises `KeyError: 'OPENAI_BASE_URL'` when the variable isn't set. If every request prints `Error: 'OPENAI_BASE_URL'` and `Total tokens consumed: 0`, this is why. Use a fallback so it works with or without a gateway:
+   ```python
+   BASE_URL = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1")
+   # ...then post to f"{BASE_URL}/chat/completions"
+   ```
+3. `asyncio.gather(..., return_exceptions=True)` returns exceptions as results — print them by type (`print(f"{type(e).__name__}: {e}")`) so a `KeyError` doesn't look like a generic error.
+4. Results arrive out of order; sort by request index, accumulate `total_tokens`, and record the first request whose running total crosses the limit.
 
 ---
 
