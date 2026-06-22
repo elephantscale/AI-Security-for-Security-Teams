@@ -1,4 +1,33 @@
-## Setup Local Environment 
+## Setup Local Environment
+
+Setup is done in each lab separately, but the steps are identical. Use the **Quick setup** script, or follow the manual steps below.
+
+---
+
+### Quick setup (recommended)
+
+From inside the lab you want to run, execute the `setup.sh` script that lives in the `labs/` folder:
+
+```sh
+cd labs/01-Introduction      # or any lab directory
+../setup.sh
+```
+
+This creates the virtual environment (`myenv`), registers the **My env** Jupyter kernel, installs that lab's `requirements.txt`, and ensures the shared `.env` exists at `labs/.env`.
+
+When it finishes:
+
+1. Add your API key to `labs/.env`:
+   ```sh
+   OPENAI_API_KEY=sk-...
+   ```
+2. Open the notebook and select the **My env** kernel (or run `source myenv/bin/activate` in your shell).
+
+Repeat `../setup.sh` once per lab. Everything below is the same thing done by hand.
+
+---
+
+### Manual setup
 
 1. **Navigate to the lab directory**
 *  **IMPORTANT:** Setup is done in each lab separately, but the instruction are the same.
