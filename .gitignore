@@ -231,3 +231,6 @@ myenv/
 labs/07-Capstone/ai_api_logs.jsonl
 labs/07-Capstone/threat_hunting_report.md
 labs/08-Challenge/defense_architecture_summary.md
+
+# Instructor answer keys — never ship to students
+lab-*-answers.md
