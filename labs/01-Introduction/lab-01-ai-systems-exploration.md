@@ -40,13 +40,12 @@ Your machine
             └── https://api.openai.com/v1  (OpenAI API endpoint)
 ```
 
-These labs call the OpenAI API directly. If your instructor provides an OpenAI-compatible proxy endpoint, set `OPENAI_BASE_URL` to that instead.
-
-Set your environment:
+These labs call the OpenAI API directly. The labs read your OpenAI key from the shared `labs/.env` file (created by `setup.sh`). Make sure it contains:
 
 ```bash
-export OPENAI_API_KEY="lab-key-provided-by-instructor"
-export OPENAI_BASE_URL="https://api.openai.com/v1"
+OPENAI_API_KEY=sk-...
+# Optional — set only to use a gateway instead of the OpenAI API:
+# OPENAI_BASE_URL=https://your-proxy/v1
 ```
 
 ---

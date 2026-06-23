@@ -1,5 +1,5 @@
-dotenv
-openai 
-httpx 
+openai
+python-dotenv
+httpx
 tiktoken
 jupyter
