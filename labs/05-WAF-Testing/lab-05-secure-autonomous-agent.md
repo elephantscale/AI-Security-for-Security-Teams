@@ -1,4 +1,4 @@
-# Lab 6 — Secure an Autonomous Agent
+# Lab 5 — Secure an Autonomous Agent
 
 **Module:** 6 — Agentic AI Security  
 **Duration:** 45–60 minutes  
@@ -834,4 +834,4 @@ You have demonstrated and remediated:
 
 ## What's Next
 
-**Lab 7** moves from attacking and securing a single agent to analyzing logs at scale — you will build a detection rule engine that identifies jailbreaks, prompt injection, denial-of-wallet, and agent abuse patterns across thousands of API log entries.
+**Lab 6** moves from securing a single agent to the economics of abuse — you will simulate a denial-of-wallet attack with concurrent large-prompt requests, then add rate limiting, prompt-size caps, and hard-stop budget enforcement to contain it.

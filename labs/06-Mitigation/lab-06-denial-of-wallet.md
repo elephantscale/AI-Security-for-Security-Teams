@@ -1,4 +1,4 @@
-# Lab 5 — Detect Denial-of-Wallet Attacks
+# Lab 6 — Detect Denial-of-Wallet Attacks
 
 **Module:** 7 — API Security for AI  
 **Duration:** 45–60 minutes  
@@ -870,4 +870,4 @@ You have implemented:
 
 ## What's Next
 
-**Lab 6** moves from financial attacks to agent security — you will exploit an insecure autonomous agent with excessive permissions, then add approval gates, tool whitelisting, and sandboxing to contain it.
+**Lab 7** moves from real-time mitigation to after-the-fact analysis — you will build a detection rule engine that identifies jailbreaks, prompt injection, denial-of-wallet, and agent abuse patterns across thousands of API log entries.
