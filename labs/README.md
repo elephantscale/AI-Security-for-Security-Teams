@@ -8,7 +8,7 @@ Welcome to the hands-on labs.
 2. 02-Prompt-Injection
 3. 03-WAF-Basics
 4. 04-Detection
-5. 05-WAF-Testing
+5. 05-Agent-Security
 6. 06-Mitigation
 7. 07-Capstone
 8. 08-Challenge
