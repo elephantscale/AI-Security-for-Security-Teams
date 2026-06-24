@@ -7,11 +7,11 @@ Welcome to the hands-on labs.
 1. 01-Introduction
 2. 02-Prompt-Injection
 3. 03-WAF-Basics
-4. 04-Detection
+4. 04-RAG-Security
 5. 05-Agent-Security
-6. 06-Mitigation
-7. 07-Capstone
-8. 08-Challenge
+6. 06-Denial-of-Wallet
+7. 07-Detection
+8. 08-Layered-Defense
 
 Complete the labs in order.
 
