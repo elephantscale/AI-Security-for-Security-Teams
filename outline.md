@@ -99,6 +99,7 @@ By the end of the course, students can:
 ---
 
 # Module 1 — AI Systems for Security Engineers
+*Lab: Lab 01 — `01-Introduction`*
 
 Understanding the architecture.
 
@@ -122,6 +123,7 @@ Traditional WAFs often lose visibility after the prompt reaches the model.
 ---
 
 # Module 2 — OWASP GenAI Top 10
+*Lab: none — interactive recap/discussion*
 
 Core AI attack categories.
 
@@ -146,6 +148,7 @@ Include:
 ---
 
 # Module 3 — Prompt Injection Detection
+*Lab: Lab 02 — `02-Prompt-Injection`*
 
 The “SQL injection moment” for AI.
 
@@ -175,6 +178,7 @@ Hands-on labs:
 ---
 
 # Module 4 — AI-Aware WAF Rules
+*Lab: Lab 03 — `03-WAF-Basics`*
 
 How WAF rules evolve for AI systems.
 
@@ -198,6 +202,7 @@ Examples:
 ---
 
 # Module 5 — Securing RAG Pipelines
+*Lab: Lab 04 — `04-RAG-Security`*
 
 One of the biggest new attack surfaces.
 
@@ -225,6 +230,7 @@ Case study:
 ---
 
 # Module 6 — Agentic AI Security
+*Lab: Lab 05 — `05-Agent-Security`*
 
 Where things become dangerous.
 
@@ -254,6 +260,7 @@ This is the section managers usually care about most because the risk becomes op
 ---
 
 # Module 7 — API Security for AI
+*Lab: Lab 06 — `06-Denial-of-Wallet`*
 
 AI systems are API-heavy.
 
@@ -275,6 +282,7 @@ Tie into:
 ---
 
 # Module 8 — Detection Engineering & SOC Integration
+*Lab: Lab 07 — `07-Detection`*
 
 Operational defense.
 
@@ -296,6 +304,7 @@ Examples:
 ---
 
 # Module 9 — Cloud WAFs and AI Security
+*Lab: none — interactive recap/discussion*
 
 Vendor-specific implementations.
 
@@ -315,6 +324,7 @@ Comparison:
 ---
 
 # Module 10 — Building a Layered AI Defense
+*Lab: Lab 08 — `08-Layered-Defense`*
 
 Important philosophical conclusion:
 
@@ -341,31 +351,22 @@ This aligns strongly with the “multi-layer security” model.
 
 The labs are what make the course compelling.
 
-## Example Labs
+## Module ↔ Lab map
 
-### Lab 1
-Attack a chatbot with prompt injection
+Labs run in **lab order**, which follows module order. The course has **10 modules** but **8 labs**: Modules 2 and 9 are interactive recap/discussion and have no lab. Each lab is tagged with its module throughout this outline.
 
-### Lab 2
-Bypass naïve AI filtering
+| Lab | Folder | Title | Module |
+|---|---|---|---|
+| Lab 01 | `01-Introduction` | Explore an AI system — what's on the wire | Module 1 |
+| Lab 02 | `02-Prompt-Injection` | Attack a chatbot & bypass naïve filtering | Module 3 |
+| Lab 03 | `03-WAF-Basics` | Build AI-aware WAF rules | Module 4 |
+| Lab 04 | `04-RAG-Security` | Poison a RAG pipeline | Module 5 |
+| Lab 05 | `05-Agent-Security` | Secure an autonomous agent | Module 6 |
+| Lab 06 | `06-Denial-of-Wallet` | Detect denial-of-wallet attacks | Module 7 |
+| Lab 07 | `07-Detection` | Monitor AI abuse patterns in logs | Module 8 |
+| Lab 08 | `08-Layered-Defense` | Build a layered AI defense architecture | Module 10 |
 
-### Lab 3
-Build AI-aware WAF rules
-
-### Lab 4
-Poison a RAG pipeline
-
-### Lab 5
-Detect denial-of-wallet attacks
-
-### Lab 6
-Secure an autonomous agent
-
-### Lab 7
-Monitor AI abuse patterns in logs
-
-### Lab 8
-Build layered AI defense architecture
+Modules **2** (OWASP GenAI Top 10) and **9** (Cloud WAFs) have no lab — they run as interactive recap/discussion.
 
 ---
 

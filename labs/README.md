@@ -4,14 +4,18 @@ Welcome to the hands-on labs.
 
 ## Lab Sequence
 
-1. 01-Introduction
-2. 02-Prompt-Injection
-3. 03-WAF-Basics
-4. 04-RAG-Security
-5. 05-Agent-Security
-6. 06-Denial-of-Wallet
-7. 07-Detection
-8. 08-Layered-Defense
+Labs run in lab order, which follows module order. The course has 10 modules but 8 labs — Modules 2 (OWASP GenAI Top 10) and 9 (Cloud WAFs) are discussion/recap and have no lab.
+
+| Lab | Folder | Module |
+|---|---|---|
+| Lab 01 | `01-Introduction` | Module 1 |
+| Lab 02 | `02-Prompt-Injection` | Module 3 |
+| Lab 03 | `03-WAF-Basics` | Module 4 |
+| Lab 04 | `04-RAG-Security` | Module 5 |
+| Lab 05 | `05-Agent-Security` | Module 6 |
+| Lab 06 | `06-Denial-of-Wallet` | Module 7 |
+| Lab 07 | `07-Detection` | Module 8 |
+| Lab 08 | `08-Layered-Defense` | Module 10 |
 
 Complete the labs in order.
 
