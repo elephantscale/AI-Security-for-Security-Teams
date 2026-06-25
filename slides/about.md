@@ -37,8 +37,8 @@ Notes:
 
    - Ask a lot of questions 
 
- * This is a Quantum Computing class
-   - No previous knowledge is assumed (but may be helpful) 
+ * This is an AI security class
+   - Intermediate to advanced; comfort with HTTP/API security and the OWASP Top 10 helps
    - Class will be based on the pace of majority of the students
    
 Notes
@@ -116,7 +116,7 @@ Notes
      - Your Name
      - Your background (developer, admin, manager, ...)
      - Technologies you are familiar with
-     - Familiarity with QC (scale of 1 - 4 ;  1 - new,   4 - expert)
+     - Familiarity with AI security (scale of 1 - 4 ;  1 - new,   4 - expert)
      - Something non-technical about you!(favorite ice cream flavor / hobby...)
 
 <img src="../images/hiking-3.jpg" style="width:18%;"/> &nbsp; <!-- {"left" : 1.08, "top" : 6.08, "height" : 1.99, "width" : 2.25} --><img src="../images/ice-cream-3.png" style="width:25%;"/> &nbsp; <!-- {"left" : 3.36, "top" : 6.1, "height" : 1.92, "width" : 3.54} --><img src="../images/biking-1.jpg" style="width:18%;"/> &nbsp; <!-- {"left" : 6.92, "top" : 6.08, "height" : 1.99, "width" : 2.25} -->
