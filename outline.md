@@ -1,4 +1,4 @@
-# Practical AI Security for Defenders
+# Practical AI Security for Security Teams
 *From prompt injection to layered runtime defense — for AppSec, SOC, infra, and WAF teams.*
 
 © Elephant Scale
