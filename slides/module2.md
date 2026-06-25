@@ -28,7 +28,7 @@ The **OWASP Top 10 for LLM Applications** (first published 2023, updated 2025) c
 
 It is maintained by OWASP's AI Security Project and is now the de facto reference for AI application risk.
 
-Why it matters to WAF engineers:
+Why it matters to defenders:
 - Defines the threat categories you are expected to defend against
 - Maps directly to where security controls must be placed
 - Provides a shared vocabulary across security, engineering, and compliance teams
@@ -703,7 +703,7 @@ Map each category to a control layer.
 
 - OWASP GenAI Top 10 defines the ten critical AI-specific risks
 - Classic OWASP patterns have AI analogs — but require new defense strategies
-- Prompt injection (LLM01) is the most operationally significant risk for WAF engineers
+- Prompt injection (LLM01) is the most operationally significant risk for defenders
 - Insecure output handling (LLM02) creates secondary injection risks downstream
 - Training data poisoning (LLM03) and supply chain (LLM05) are pre-deployment risks requiring MLSecOps
 - Model DoS and Unbounded Consumption (LLM04/LLM10) require token-aware rate limiting

@@ -1,4 +1,4 @@
-# AI Security for WAF Specialists
+# Practical AI Security for Security Teams
 
 © Elephant Scale
 

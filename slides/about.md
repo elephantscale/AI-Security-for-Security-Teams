@@ -1,4 +1,4 @@
-# AI Security for WAF Specialists
+# Practical AI Security for Security Teams
 
 © Elephant Scale
 
@@ -8,7 +8,7 @@
 
 | Module | Topic |
 |--------|-------|
-| 1 | AI Systems for WAF Engineers |
+| 1 | AI Systems for Security Engineers |
 | 2 | OWASP GenAI Top 10 |
 | 3 | Prompt Injection Detection |
 | 4 | AI-Aware WAF Rules |

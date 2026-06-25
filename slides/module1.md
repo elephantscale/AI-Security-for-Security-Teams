@@ -1,4 +1,4 @@
-# Module 1 — AI Systems for WAF Engineers
+# Module 1 — AI Systems for Security Engineers
 
 © Elephant Scale
 
