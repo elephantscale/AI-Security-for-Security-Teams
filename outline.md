@@ -1,13 +1,17 @@
-# AI Security for WAF Specialists
+# Practical AI Security for Defenders
+*From prompt injection to layered runtime defense — for AppSec, SOC, infra, and WAF teams.*
+
 © Elephant Scale
 
 June 16, 2026
 
 ## Course Description
 
-This course teaches Web Application Firewall (WAF) specialists how to secure modern AI-powered applications, APIs, copilots, and autonomous agents.
+This course teaches security professionals how to secure modern AI-powered applications, APIs, copilots, and autonomous agents.
 
-Students learn how traditional web attacks evolve in AI systems, how prompt injection differs from SQL injection, how AI agents abuse tools and APIs, and how WAFs integrate with runtime AI security controls.
+Students learn how traditional web attacks evolve in AI systems, how prompt injection differs from SQL injection, how AI agents abuse tools and APIs, and how runtime AI controls — WAFs, API/AI gateways, and guardrails — fit together.
+
+Throughout, we use a recurring lens: **what can a network/proxy layer (like a WAF) actually see, and where does that visibility disappear?** It's the fastest way for any defender to reason about where AI threats are syntactic vs. semantic — and why no single layer is enough.
 
 The course combines:
 - OWASP GenAI Top 10
@@ -25,14 +29,14 @@ The emphasis is operational:
 
 # Why This Course Matters
 
-A normal WAF engineer thinks about:
+Most defenders today reason about:
 - XSS
 - SQL injection
 - CSRF
 - API abuse
 - rate limiting
 
-An AI security WAF engineer must now think about:
+Securing AI systems adds a new threat list:
 - prompt injection
 - jailbreaks
 - agent tool abuse
@@ -46,20 +50,20 @@ An AI security WAF engineer must now think about:
 - AI supply chain abuse
 
 The biggest mindset shift:
-AI attacks are often semantic, not merely syntactic.
+AI attacks are often semantic, not merely syntactic — which is exactly why a control that inspects bytes (a WAF) sees the request but not the intent. We keep returning to that gap to show where each defensive layer earns its place.
 
 ---
 
 # Audience
 
-- WAF specialists
+- Security engineers & AppSec
+- SOC analysts & detection engineers
 - API security engineers
-- Cloud security engineers
-- SOC analysts
+- Cloud / API / platform security
 - DevSecOps engineers
 - Security architects
+- WAF / network security specialists
 - AI platform engineers
-- Security operations teams
 
 ---
 
@@ -83,18 +87,18 @@ By the end of the course, students can:
 
 - Explain how AI applications differ from normal web apps
 - Detect AI-specific attack patterns
-- Protect LLM APIs with WAF controls
+- Protect LLM APIs with layered controls (WAF, gateway, guardrails)
 - Build AI-aware rate limiting
 - Identify prompt injection attempts
 - Secure RAG architectures
 - Defend agentic AI systems
 - Monitor AI abuse patterns
 - Design layered AI defenses
-- Integrate WAFs with AI gateways and guardrails
+- Compose WAFs, AI gateways, and guardrails into a defense-in-depth stack
 
 ---
 
-# Module 1 — AI Systems for WAF Engineers
+# Module 1 — AI Systems for Security Engineers
 
 Understanding the architecture.
 
@@ -135,9 +139,9 @@ Topics:
 
 Include:
 - differences from classic OWASP
-- mapping to WAF controls
-- where WAF helps
-- where WAF fails
+- mapping to defensive controls (WAF, gateway, app-layer)
+- where each control helps
+- where each control fails
 
 ---
 
@@ -305,7 +309,7 @@ Topics:
 - NGINX AI security patterns
 
 Comparison:
-- traditional WAF vs AI gateway
+- traditional WAF vs AI gateway vs app-layer guardrail
 - proxy-based vs semantic filtering
 
 ---
@@ -314,7 +318,7 @@ Comparison:
 
 Important philosophical conclusion:
 
-A WAF alone cannot secure AI.
+No single layer can secure AI (a WAF least of all, on its own).
 
 Students build a layered model:
 
@@ -389,12 +393,16 @@ Teams build:
 # Strategic Positioning
 
 This is NOT:
-“WAF but with AI buzzwords.”
+“security training with AI buzzwords.”
 
 This IS:
-“Your WAF team is becoming the runtime security layer for autonomous systems.”
+“Every security team is becoming the runtime security layer for autonomous systems.”
 
-Potential positioning:
+General positioning:
+
+> Hands-on muscle for defenders to secure AI systems in production — across the WAF, the gateway, the app layer, and the SOC.
+
+WAF-edition positioning (when selling to a WAF-heavy audience — same labs, WAF-forward framing):
 
 > From Web Application Firewall Engineer to AI Runtime Security Engineer
 

@@ -1,4 +1,6 @@
-# AI-Security-for-WAF-Specialists.md
+# Practical AI Security for Defenders
+
+*From prompt injection to layered runtime defense — for AppSec, SOC, infra, and WAF teams.*
 
 ### Table of Contents
 1. [Outline](outline.md)
