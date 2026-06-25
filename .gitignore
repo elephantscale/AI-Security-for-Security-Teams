@@ -235,3 +235,4 @@ labs/08-Layered-Defense/defense_architecture_summary.md
 # Instructor-only material — never ship to students
 lab-*-answers.md
 INSTRUCTOR-*.md
+INSTRUCTOR-sync.sh
