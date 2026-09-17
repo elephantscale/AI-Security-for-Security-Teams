@@ -1,0 +1,32 @@
+[
+  {
+    "id": "F-01",
+    "source": "scanner",
+    "claim": "An authenticated Alpha user can read Beta ticket 2 through GET /tickets/2.",
+    "suggested_severity": "high"
+  },
+  {
+    "id": "F-02",
+    "source": "support report",
+    "claim": "Changing a ticket number in the URL reveals another customer's ticket.",
+    "suggested_severity": "critical"
+  },
+  {
+    "id": "F-03",
+    "source": "scanner",
+    "claim": "The q parameter on GET /search permits SQL injection because it contains user input.",
+    "suggested_severity": "high"
+  },
+  {
+    "id": "F-04",
+    "source": "deployment review",
+    "claim": "The production reverse proxy accepts obsolete TLS versions.",
+    "suggested_severity": "medium"
+  },
+  {
+    "id": "F-05",
+    "source": "scanner",
+    "claim": "GET /health can be called without authentication.",
+    "suggested_severity": "low"
+  }
+]

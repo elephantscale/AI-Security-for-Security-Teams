@@ -6,6 +6,8 @@
 
 ## Module 8 Agenda
 
+- Enterprise agent security: task authority and independently enforced boundaries
+
 - AI telemetry: what to collect and why
 - Prompt logging architecture
 - Token analytics and cost anomalies
@@ -656,6 +658,58 @@ Auto-actions:
 ```
 
 SOAR tools: Splunk SOAR, Palo Alto XSOAR, Tines
+
+---
+
+## Agent Telemetry — Connect Authority to Effect
+
+Collect enough evidence to connect:
+
+- Initiating principal, runtime, task, and session
+- Proposed tool action, resource, and destination
+- Policy version and approval decision
+- Actual result and material effect
+- Related endpoint, gateway, and application events
+
+Minimize record contents and secrets in logs. A useful audit trail does not
+require unrestricted collection of prompts or private model reasoning.
+
+---
+
+## Attempted Action Is Not Completed Impact
+
+| Observation | Interpretation |
+|---|---|
+| Agent requests an unauthorized send | Unsafe attempt |
+| Resource denies the request | Prevented effect on that path |
+| Destination receives the record | Completed disclosure |
+
+Retain evidence from the resource and destination, not just the assistant's
+summary. A post-action monitor cannot undo an irreversible disclosure.
+
+---
+
+## Agent Incident Drill — Stop, Contain, Recover, Learn
+
+- Stop the affected task and remove the narrowest risky capability
+- Revoke issued authority and verify downstream containment
+- Preserve evidence of attempted and completed effects
+- Repair state and define who approves resuming work
+- Add a regression case for the failure
+
+Lab 8 exercises stopped workers, reusable credentials, queued work, and an
+unaffected task that should continue operating.
+
+---
+## Reading — Agent Security in the Enterprise
+
+OpenAI, August 2026: task authority, independent boundaries, capability
+composition, and incident response.
+
+[Download the paper](https://openai.com/business/learn/agent-security-enterprise/)
+
+These are architectural recommendations. The classroom fixtures illustrate them;
+they do not certify a product or reproduce a production security architecture.
 
 ---
 

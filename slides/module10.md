@@ -6,6 +6,8 @@
 
 ## Module 10 Agenda
 
+- Enterprise agent security: task authority and independently enforced boundaries
+
 - Why a WAF alone cannot secure AI
 - The 10-layer AI defense model
 - Layer 1: WAF
@@ -628,6 +630,64 @@ Answer these questions for every deployment. This is the AI threat model.
 
 ---
 
+## Capstone — The Agent Was Fooled; the System Still Held
+
+**Lab 8 extension: 75–90 additional minutes**
+
+Replay an unsafe action caused by a poisoned support ticket.
+The fixture assumes the model accepted the attack.
+
+- Compare unprotected and resource-enforced behavior
+- Preserve authorized reads and drafts
+- Constrain approved sends by tenant and destination
+- Stop execution and separately revoke authority
+- Reconstruct decisions and effects from audit events
+
+No model account or live messaging service is required for this extension.
+
+---
+
+## Containment Must Survive a Wrong Decision
+
+Instructions guide the agent; independent controls bound the effect.
+
+- Bypass worker orchestration and call the resource directly
+- Replay with the wrong runtime, audience, or expired credential
+- Attempt a cross-tenant read and an unapproved destination
+- Reject queued work after authority is revoked
+- Verify legitimate work still succeeds
+
+The Python fixture represents trust boundaries; it is not an OS sandbox.
+Production requires independently protected enforcement services.
+
+---
+
+## Capstone Evidence and Completion
+
+Submit the defense architecture and containment incident record.
+
+- Authorized task and maximum completed effect
+- Unsafe attempt, policy decision, and observed effect
+- Successful legitimate operations
+- Stop/revoke results and downstream checks
+- Unimplemented production controls and accountable owners
+
+Passing requires both containment and preserved useful behavior.
+The exercise tests control behavior, not model prompt-injection resistance.
+
+---
+## Reading — Agent Security in the Enterprise
+
+OpenAI, August 2026: task authority, independent boundaries, capability
+composition, and incident response.
+
+[Download the paper](https://openai.com/business/learn/agent-security-enterprise/)
+
+These are architectural recommendations. The classroom fixtures illustrate them;
+they do not certify a product or reproduce a production security architecture.
+
+---
+
 ## Module 10 Summary
 
 - A WAF alone cannot secure AI — the interior attack surface is invisible to HTTP-layer controls
@@ -668,15 +728,14 @@ Continue learning: MITRE ATLAS, OWASP GenAI Project, NIST AI RMF, cloud provider
 
 **Build a layered AI defense architecture**
 
-You will:
-1. Start with a completely unprotected AI API endpoint
-2. Add each of the 10 layers incrementally, testing attack coverage after each addition
-3. Run the full attack suite (prompt injection, token flooding, tool abuse, RAG poisoning) against each configuration
-4. Document which layer blocked which attack and why
-5. Produce a defense architecture diagram for your simulated deployment
+- Assemble the six-layer Python stack and test the provided attacks
+- Record which layer blocked each attempt and why
+- Measure legitimate traffic and produce an architecture summary
+- Continue with the containment extension and incident-response drill
 
-Environment: Docker Compose (NGINX + Kong + mock LLM + agent framework + Elasticsearch)
-Time: 90 minutes
+Environment: Python notebook and an LLM endpoint for the original stack.
+The separate containment extension uses only local synthetic data.
+Time: 60–90 minutes for the stack plus 75–90 minutes for containment.
 
 ---
 
@@ -705,7 +764,9 @@ Then:
 
 **Defend a simulated enterprise AI assistant**
 
-The capstone tests everything from all 10 modules simultaneously.
+Use this enterprise scenario for architecture discussion across Modules 1–10.
+Lab 08 implements a smaller support-ticket containment drill; it does not provide
+the full enterprise deployment described below.
 
 **Scenario:** You are the security engineer for an enterprise AI assistant with:
 - A RAG pipeline over internal company documents
@@ -726,5 +787,17 @@ The capstone tests everything from all 10 modules simultaneously.
 | 7 | Agent escalation: chained tool calls to reach unauthorized systems |
 
 **You will be graded on:** detection rate, false positive rate, time to contain, and completeness of your layered architecture.
+
+---
+
+## What's Next — Module 11
+
+**AI for Defense: From Findings to Verified Fixes**
+
+Use an AI assistant to investigate a small application, reproduce a vulnerability,
+prepare a tested repair, and obtain independent review.
+
+Apply the agent controls from Module 6 and the evidence discipline from Module 8.
+Lab 9 adds a half-day workshop and a verified-repair extension to this capstone.
 
 ---

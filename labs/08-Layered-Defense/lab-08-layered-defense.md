@@ -1,7 +1,8 @@
 # Lab 8 — Build a Layered AI Defense Architecture
 
 **Module:** 10 — Building a Layered AI Defense  
-**Duration:** 60–90 minutes  
+**Duration:** 60–90 minutes for the original stack; add 75–90 minutes for the containment capstone
+
 **Difficulty:** Advanced  
 
 ---
@@ -448,7 +449,7 @@ Extend the stack with:
 
 ## Lab Summary
 
-You assembled a 6-layer AI security stack and validated it against the full attack taxonomy from this course:
+You assembled a 6-layer AI security stack and tested selected attack examples from this course:
 
 - Layer 1 (WAF): IP and request-rate controls
 - Layer 2 (Token limiter): DoW and oversized prompt protection
@@ -470,6 +471,17 @@ You assembled a 6-layer AI security stack and validated it against the full atta
 
 ---
 
-## Capstone Preview
+## Capstone — The Agent Was Fooled; the System Still Held
 
-You are now ready for the capstone: a full red vs blue exercise where attack teams attempt prompt injection, tool abuse, credential theft, retrieval poisoning, excessive API consumption, and agent escalation against a live enterprise AI assistant — and defense teams apply the layered architecture you just built.
+Continue with the [containment guide](containment/lab-08-containment.md) and
+[notebook](containment/lab-08-containment.ipynb). Allow 75–90 additional minutes.
+The extension is part of Lab 08, so the course remains 11 modules and 9 labs.
+
+Replay unsafe actions from a poisoned support ticket. Enforce task, tenant,
+credential, and destination boundaries; preserve legitimate work; then stop the
+worker and separately revoke its authority. Submit the incident record alongside
+your defense architecture summary.
+
+The extension runs locally with Python 3.10+ and the standard library. It does not
+require the original notebook's API key or a live model. It tests containment
+under an assumed model failure, not model resistance to prompt injection.

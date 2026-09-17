@@ -2,7 +2,7 @@
 # Generate one pptx per source file into assembly.out/, numbered 0-based so the
 # prefix matches the module number:
 #
-#   00__about.pptx  01__module1.pptx  02__module2.pptx ... 10__module10.pptx
+#   00__about.pptx  01__module1.pptx  02__module2.pptx ... 11__module11.pptx
 #
 # The shared assembler ($ES_HOME/utils/presentations/slides-assembler.sh) numbers
 # 1-based (01__about, 02__module1, ...). We leave that shared tool untouched and
@@ -12,6 +12,21 @@ cd "$(dirname "$0")"
 
 # 1. Build all decks with the shared assembler (produces 01__*, 02__*, ...).
 "$ES_HOME"/utils/presentations/slides-assembler.sh slide-list.txt
+
+# The shared assembler can return success even when a converter fails.
+# Verify every listed deck exists before renumbering the output.
+counter=0
+while read -r source target || [[ -n "$source" ]]; do
+    [[ -z "$source" || "$source" == \#* ]] && continue
+    counter=$((counter + 1))
+    name=$(basename "${target:-$source}")
+    [[ "$source" == *.md ]] && name="${name%.*}.pptx"
+    expected=$(printf 'assembly.out/%02d__%s' "$counter" "$name")
+    if [[ ! -s "$expected" ]]; then
+        echo "Build failed: missing $expected (source: $source). Check the converter output above." >&2
+        exit 1
+    fi
+done < slide-list.txt
 
 # 2. Renumber assembly.out from 1-based to 0-based (ascending, so lower numbers
 #    are freed first and never collide).

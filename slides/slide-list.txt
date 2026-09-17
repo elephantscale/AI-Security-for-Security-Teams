@@ -9,3 +9,5 @@ module7.md
 module8.md
 module9.md
 module10.md
+module11.md
+promo-slides.md

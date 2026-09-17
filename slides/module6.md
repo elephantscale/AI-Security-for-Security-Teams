@@ -6,6 +6,8 @@
 
 ## Module 6 Agenda
 
+- Enterprise agent security: task authority and independently enforced boundaries
+
 - Why agentic AI changes the threat model
 - Excessive agency and tool abuse
 - API chaining and autonomous loops
@@ -631,6 +633,72 @@ until you have checked every system directory."
 
 ---
 
+## Task Authority — Access Is Only the Starting Point
+
+An invoice-processing agent may reach the payment API and stay below a spending
+limit while still making an unauthorized subscription renewal.
+
+- The initiating user establishes the task
+- The runtime identifies the executing workload
+- The task grant bounds resources, actions, destinations, and duration
+- A new commitment needs a separate authorization decision
+
+A tool connection does not authorize every action it exposes.
+
+---
+
+## Maximum Completed Effect
+
+Ask what can finish before another independent decision is required.
+
+| Task | Maximum Permitted Effect |
+|---|---|
+| Summarize a case | Read the scoped record |
+| Draft a reply | Create a local draft |
+| Send an approved reply | Transmit to the approved recipient |
+
+A send approval does not undo sensitive data already read.
+Assess every outbound path, including shell and browser tools.
+
+---
+
+## Identity — User, Runtime, Task, and Session
+
+- User or system: who initiated the work?
+- Runtime: which workload is executing it?
+- Task: which purpose and scope were authorized?
+- Session: which short-lived access was issued?
+- Software provenance: which tools and reviewed versions are running?
+
+Correlate these facets in audit records. An agent display name is insufficient.
+
+---
+
+## Tool Composition and Capability Changes
+
+Sensitive record access plus external send creates a disclosure path.
+A shell plus unrestricted egress can bypass a messaging-tool restriction.
+
+- Inventory capabilities and accountable owners
+- Review meaningful changes to actions, schemas, and destinations
+- Test dangerous combinations, not just individual tools
+- Keep new capability paths gated until reviewed
+
+Practice these boundaries in Lab 8's containment extension.
+
+---
+## Reading — Agent Security in the Enterprise
+
+OpenAI, August 2026: task authority, independent boundaries, capability
+composition, and incident response.
+
+[Download the paper](https://openai.com/business/learn/agent-security-enterprise/)
+
+These are architectural recommendations. The classroom fixtures illustrate them;
+they do not certify a product or reproduce a production security architecture.
+
+---
+
 ## Module 6 Summary
 
 Key takeaways:
@@ -664,7 +732,7 @@ The agent talks to APIs. Module 7 is about securing those APIs.
 ![](../images/pexels-dmytkopl-34929953.jpg)
 ---
 
-## Lab 6 Preview — Secure an Autonomous Agent
+## Lab 5 Preview — Secure an Autonomous Agent
 
 **Objective:** Identify vulnerabilities in a running agent and apply defensive controls.
 

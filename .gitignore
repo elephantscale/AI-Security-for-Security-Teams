@@ -236,3 +236,16 @@ labs/08-Layered-Defense/defense_architecture_summary.md
 lab-*-answers.md
 INSTRUCTOR-*.md
 INSTRUCTOR-sync.sh
+
+# Student-generated workshop evidence and regression exercise
+labs/09-Verified-Fixes/artifacts/
+labs/09-Verified-Fixes/tests/test_security.py
+
+# Generated containment-capstone evidence
+labs/08-Layered-Defense/containment/artifacts/
+
+# Promotional demo evidence
+promo/labs/artifacts/
+
+# Local Claude configuration
+/.claude/

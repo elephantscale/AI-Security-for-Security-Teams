@@ -6,6 +6,8 @@
 
 ## Module 7 Agenda
 
+- Enterprise agent security: task authority and independently enforced boundaries
+
 - API gateways as AI enforcement points
 - GraphQL risks in AI systems
 - MCP and AI plugin attack surface
@@ -693,6 +695,58 @@ Many existing APIs now embed AI features invisibly. These create new risk.
 
 ---
 
+## Task-Scoped Credentials and Resource Authorization
+
+A trusted broker can issue narrow, short-lived access for a specific task.
+
+- Bind access to the initiating principal and runtime
+- Limit audience, actions, resources, and lifetime
+- Keep sensitive credentials outside model context where possible
+- Enforce business authorization at the affected resource
+
+A token with a valid signature still needs scope and policy checks.
+Task-token designs are architectural patterns, not one universal standard.
+
+---
+
+## Recheck Authority When the Effect Happens
+
+Queued work must not preserve yesterday's authorization indefinitely.
+
+- Validate the credential when the resource operation executes
+- Reject wrong audience, wrong runtime, expired, or revoked access
+- Require a new grant for an expanded task
+- Keep resource checks effective if orchestration is bypassed
+
+In Lab 8, call the protected resource directly and replay a queued operation.
+
+---
+
+## Stop and Revoke Are Different Operations
+
+| Control | What It Does |
+|---|---|
+| Stop the worker | Prevent further work in that execution path |
+| Revoke authority | Remove permission to use issued access |
+| Verify downstream | Establish what completed or remains active |
+
+A stopped process may leave a reusable token.
+A revoked token does not undo a committed operation.
+Test caches, delegated work, expiration, and revocation propagation.
+
+---
+## Reading — Agent Security in the Enterprise
+
+OpenAI, August 2026: task authority, independent boundaries, capability
+composition, and incident response.
+
+[Download the paper](https://openai.com/business/learn/agent-security-enterprise/)
+
+These are architectural recommendations. The classroom fixtures illustrate them;
+they do not certify a product or reproduce a production security architecture.
+
+---
+
 ## Module 7 Summary
 
 Key takeaways:
@@ -723,7 +777,7 @@ If Module 6 was about preventing agentic attacks, and Module 7 was about securin
 
 ---
 
-## Lab 5 Preview — Detect Denial-of-Wallet Attacks
+## Lab 6 Preview — Detect Denial-of-Wallet Attacks
 
 **Objective:** Identify and block denial-of-wallet attack patterns before they cause significant cost.
 

@@ -6,6 +6,8 @@
 
 ## Module 9 Agenda
 
+- Enterprise agent security: task authority and independently enforced boundaries
+
 - Traditional WAF vs AI gateway — a principled comparison
 - AWS WAF for AI APIs
 - Azure WAF and Azure AI Content Safety
@@ -740,6 +742,46 @@ Common mistakes to avoid:
 5. **Trusting the AI gateway's allow decision without WAF** — defense in depth requires both
 6. **Not testing WAF rules against streaming responses** — WAF may pass SSE chunks uninspected
 7. **Using managed rule sets without tuning** — high false-positive rates on legitimate AI requests
+
+---
+
+## Shared Responsibility for Hosted Agents
+
+Provider-managed inference, harnesses, and enterprise connectors may sit in
+different trust domains.
+
+- Name the owner of each runtime, credential store, and resource policy
+- Identify which controls the enterprise can configure and test
+- Request evidence for controls operated by the provider
+- Keep customer-managed connector responsibilities explicit
+
+A remotely hosted agent does not make every connected system provider-managed.
+
+---
+
+## Place the Gateway Near the Effect
+
+A model gateway can observe inference traffic without knowing whether an
+application action is authorized.
+
+- Application policy enforces tenant and record ownership
+- Repository protections constrain changes and merge authority
+- Destination and network controls restrict data movement
+- An action gateway evaluates task scope before tool execution
+
+Map bypass paths. A shell with direct egress may never pass through your model
+gateway. A product label alone does not establish enforcement coverage.
+
+---
+## Reading — Agent Security in the Enterprise
+
+OpenAI, August 2026: task authority, independent boundaries, capability
+composition, and incident response.
+
+[Download the paper](https://openai.com/business/learn/agent-security-enterprise/)
+
+These are architectural recommendations. The classroom fixtures illustrate them;
+they do not certify a product or reproduce a production security architecture.
 
 ---
 

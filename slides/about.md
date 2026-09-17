@@ -18,6 +18,7 @@
 | 8 | Detection Engineering & SOC Integration |
 | 9 | Cloud WAFs and AI Security |
 | 10 | Building a Layered AI Defense |
+| 11 | AI for Defense: From Findings to Verified Fixes |
 
 Notes:
 

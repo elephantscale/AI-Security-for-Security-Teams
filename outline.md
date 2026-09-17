@@ -21,6 +21,7 @@ The course combines:
 - AI traffic inspection
 - Runtime defense
 - Practical detection engineering
+- AI-assisted vulnerability validation and verified repair
 
 The emphasis is operational:
 “How do you actually defend AI systems in production?”
@@ -95,6 +96,7 @@ By the end of the course, students can:
 - Monitor AI abuse patterns
 - Design layered AI defenses
 - Compose WAFs, AI gateways, and guardrails into a defense-in-depth stack
+- Use a defensive AI assistant to validate findings and prepare reviewed, tested fixes
 
 ---
 
@@ -247,6 +249,8 @@ Topics:
 - multi-agent attacks
 
 Defenses:
+- task-scoped authority and distinct user, runtime, task, and session identities
+- capability composition and maximum completed effect
 - least privilege for agents
 - approval gates
 - runtime policy engines
@@ -272,6 +276,8 @@ Topics:
 - AI plugin security
 - agent authentication
 - delegated authorization
+- short-lived task credentials and resource-side policy checks
+- separate task stopping, revocation, and downstream verification
 - secret management
 - signed prompts
 - API inventory for AI
@@ -295,6 +301,8 @@ Topics:
 - AI attack indicators
 - threat hunting for LLM abuse
 - AI runtime observability
+- correlate principal, runtime, task, action, policy decision, and completed effect
+- agent incident drills: stop, contain, recover, and learn
 
 Examples:
 - detecting jailbreak campaigns
@@ -320,6 +328,8 @@ Topics:
 Comparison:
 - traditional WAF vs AI gateway vs app-layer guardrail
 - proxy-based vs semantic filtering
+- shared responsibility for inference, harnesses, and enterprise connectors
+- placement of action, resource, and egress enforcement
 
 ---
 
@@ -345,6 +355,54 @@ Students build a layered model:
 
 This aligns strongly with the “multi-layer security” model.
 
+**Lab 08 containment extension — 75–90 additional minutes:**
+[The Agent Was Fooled; the System Still Held](labs/08-Layered-Defense/containment/lab-08-containment.md).
+Students replay unsafe actions, enforce resource and destination boundaries,
+verify stop/revoke behavior, and submit an incident record. The local simulation
+requires no model API key. The original stack exercise remains 60–90 minutes.
+
+This extension draws on OpenAI's *Agent security in the enterprise* (August 2026):
+[paper download](https://openai.com/business/learn/agent-security-enterprise/).
+The paper describes architectural guidance; the exercise models selected controls.
+
+---
+
+# Module 11 — AI for Defense: From Findings to Verified Fixes
+*Lab: Lab 09 — `09-Verified-Fixes`*
+
+Half-day workshop: apply AI to security work, then apply the course's controls to the defensive agent itself.
+
+**Duration:** 3.5–4 hours, including discussion and a break. Schedule after Module 10 as an additional half-day; it can also run as a follow-on workshop for previous students.
+
+Topics:
+- OpenAI's defender's window and continuous defense approach
+- scoped access, security context, and security invariants
+- AI-assisted triage and evidence-based prioritization
+- duplicate findings and incomplete validation environments
+- local vulnerability reproduction
+- security regression tests and functional behavior
+- focused patch generation and independent human review
+- defensive assistant permission checks and preservation of security tests
+- rollout planning and deployed verification
+
+Hands-on lab:
+- investigate five reports against a synthetic multi-tenant support-ticket API
+- recognize prompt injection in an alert's ticket text
+- reproduce an ownership vulnerability
+- prepare a tested repair and a review packet
+
+Connections:
+- Module 6: protect the defensive agent's tools and permissions
+- Module 8: cite alert evidence and preserve uncertainty
+- Module 10: add a verified repair to the layered-defense capstone
+
+Sources:
+- [The Defender's Window](https://openai.com/index/the-defenders-window/)
+- [Daybreak](https://openai.com/daybreak/)
+- [The Defense Factory](https://openai.com/the-defense-factory/)
+
+The required lab uses a local fixture and an approved assistant; specialized Daybreak access is not required.
+
 ---
 
 # Labs
@@ -353,7 +411,7 @@ The labs are what make the course compelling.
 
 ## Module ↔ Lab map
 
-Labs run in **lab order**, which follows module order. The course has **10 modules** but **8 labs**: Modules 2 and 9 are interactive recap/discussion and have no lab. Each lab is tagged with its module throughout this outline.
+Labs run in **lab order**, which follows module order. The course has **11 modules** and **9 labs**: Modules 2 and 9 are interactive recap/discussion and have no lab. Each lab is tagged with its module throughout this outline.
 
 | Lab | Folder | Title | Module |
 |---|---|---|---|
@@ -365,6 +423,7 @@ Labs run in **lab order**, which follows module order. The course has **10 modul
 | Lab 06 | `06-Denial-of-Wallet` | Detect denial-of-wallet attacks | Module 7 |
 | Lab 07 | `07-Detection` | Monitor AI abuse patterns in logs | Module 8 |
 | Lab 08 | `08-Layered-Defense` | Build a layered AI defense architecture | Module 10 |
+| Lab 09 | `09-Verified-Fixes` | From security findings to verified fixes | Module 11 |
 
 Modules **2** (OWASP GenAI Top 10) and **9** (Cloud WAFs) have no lab — they run as interactive recap/discussion.
 
@@ -388,6 +447,9 @@ Teams build:
 - runtime detection
 - guardrails
 - incident response
+
+Module 10 includes the executable containment drill and incident record.
+Module 11 extends the capstone with a reproduced vulnerability, a tested patch, and an independent review packet. Teams also explain how they restricted the defensive agent and what evidence would be needed to verify a deployed fix.
 
 ---
 
