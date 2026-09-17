@@ -66,6 +66,10 @@ Transition: “Let's write down what the resource needs to know.”
 
 **05:00–07:00 — 2 minutes**
 
+**Say explicitly — OpenAI connection (paraphrase):**
+
+“Here we are applying OpenAI’s recommendation to bind authority to the task. A valid login does not authorize every action. Our task allows reading Alpha’s ticket and drafting a reply; the poisoned ticket cannot expand that permission.”
+
 Use the four table rows to establish the policy. The initiating person, runtime,
 task, record, and destination are distinct pieces of information.
 
@@ -84,6 +88,10 @@ Everything uses synthetic data and in-memory effects. No real email is sent.
 ## Slide 5 — Demo 1: Observe the Unsafe Effect
 
 **07:00–09:00 — 2 minutes**
+
+**Say explicitly — OpenAI connection (paraphrase):**
+
+“Here we are applying OpenAI’s recommendation to assess completed effects. We inspect what data was read and what message was created. This scripted baseline shows the consequence we want the controls to prevent.”
 
 Switch to the terminal or first notebook demo cell:
 
@@ -106,6 +114,10 @@ Transition: “Now we'll submit those same requests to a resource that checks th
 ## Slide 6 — Demo 2: The Resource Enforces the Boundary
 
 **09:00–14:00 — 5 minutes**
+
+**Say explicitly — OpenAI connection (paraphrase):**
+
+“Here we are applying OpenAI’s recommendation to enforce task limits outside the model. The resource checks the requested action, record, and destination. Even if the model accepts the poisoned instruction, these checks can deny the action. The separate send grant comes from our trusted operator.”
 
 ```sh
 python3 promo/labs/demo.py containment
@@ -137,6 +149,10 @@ Transition: “What happens if we decide this agent must stop immediately?”
 
 **14:00–17:00 — 3 minutes**
 
+**Say explicitly — OpenAI connection (paraphrase):**
+
+“Here we are applying OpenAI’s recommendation to separate stopping execution from revoking authority. Stopping the worker does not invalidate its credential. We test both controls and check whether downstream work can still complete.”
+
 ```sh
 python3 promo/labs/demo.py response
 ```
@@ -161,6 +177,10 @@ Transition: “The evidence we just saw tells us where each boundary worked.”
 ## Slide 8 — Put Controls Where the Effect Happens
 
 **17:00–20:00 — 3 minutes**
+
+**Say explicitly — OpenAI connection (paraphrase):**
+
+“Here we are applying OpenAI’s maximum-completed-effect framing: how far can this agent get before an independently enforced boundary stops it? In our example, the original task permits an Alpha read and draft. Sending requires a new authorization, and the resource also checks the destination.”
 
 Return to the slides. Walk from guidance to task policy, resource authorization,
 runtime restrictions, and evidence. For each layer, give one concrete example
@@ -248,6 +268,11 @@ introduce another technical topic. If you finish early, keep the conclusion shor
 rather than stretching it to exactly thirty minutes.
 
 ## Sources and Attribution
+
+The OpenAI callouts on slides 4–8 and the suggested spoken lines are paraphrases
+of the paper’s recommendations, not verbatim quotations or claims that these
+security principles originated with OpenAI. They replace part of the existing
+explanation within each time slot; no additional presentation time is required.
 
 - OpenAI, *Agent security in the enterprise*, August 2026, printed pp. 4–5,
   13–20, and 24–27. [Download page](https://openai.com/business/learn/agent-security-enterprise/).

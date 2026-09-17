@@ -38,7 +38,9 @@ We need to connect the user's task to the action that actually happens.
 | Which data is in scope? | Tenant and specific records |
 | Where may it go? | Approved destinations |
 
-The ticket cannot grant itself authority.
+**Applying OpenAI’s recommendation: bind authority to the task.**
+
+A valid credential is not permission for a new task. The ticket cannot grant itself authority.
 
 ---
 
@@ -51,7 +53,9 @@ The ticket cannot grant itself authority.
 
 **Demonstration:** We assume the agent followed the poisoned ticket.
 
-All actions are local simulations. No live model or email service is used.
+**Applying OpenAI’s recommendation: assess completed effects.**
+
+Inspect the record accessed and the simulated message created. No live model or email is used.
 
 ---
 
@@ -63,7 +67,9 @@ All actions are local simulations. No live model or email service is used.
 - Require a separate grant for sending
 - Restrict that grant to the approved destination
 
-Success means unsafe effects are blocked and legitimate work still succeeds.
+**Applying OpenAI’s recommendation: enforce task limits outside the model.**
+
+The resource checks the action, record, and destination before allowing an effect.
 
 ---
 
@@ -75,7 +81,9 @@ Success means unsafe effects are blocked and legitimate work still succeeds.
 | Revoke authority | Issued credentials cannot be reused |
 | Verify downstream | No unauthorized effect completed |
 
-An unaffected authorized task should continue working.
+**Applying OpenAI’s recommendation: stop execution and revoke authority.**
+
+Verify both independently; preserve unaffected authorized work.
 
 ---
 
@@ -87,7 +95,12 @@ An unaffected authorized task should continue working.
 - Runtime and destination controls constrain data movement
 - Audit evidence connects the request, decision, and result
 
-The Python demo models these boundaries. Production needs independently protected controls.
+**Applying OpenAI’s recommendation: bound the maximum completed effect.**
+
+What can this agent complete before an independent control stops it?
+
+Source for slides 4–8: OpenAI, *Agent security in the enterprise* (August 2026).
+Our demos are simplified applications of these recommendations.
 
 ---
 
